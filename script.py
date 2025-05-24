@@ -2,7 +2,13 @@ import json
 import requests
 import schedule, time
 
-conf_file = 'conf.json'
+def load_conf(filename = 'conf.json'):
+    data = {}
+    with open(filename) as json_file:
+        data = json.load(json_file)
+    return data
+
+conf = load_conf()
 
 bosses = {
 
