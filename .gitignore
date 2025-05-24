@@ -2,3 +2,5 @@ dev
 *.iml
 .idea
 conf.json
+htmlcov
+.coverage
