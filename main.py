@@ -63,6 +63,16 @@ class Guild:
         data = response.json()
         self.name = data['guild']['name']
         self.members = data['guild']['members']
+        guild_res = requests.get(self.config['endpoints']['guild'], headers=self.headers['guild'])
+        guild_season = requests.get(self.config['endpoints']['guildRaid'], headers=self.headers['guild'])
+        if guild_res.status_code != 200:
+            raise RuntimeError(guild_res.text)
+        if guild_season.status_code != 200:
+            raise RuntimeError(guild_season.text)
+
+        guild_data = guild_res.json()
+        self.name = guild_data['guild']['name']
+        self.members = guild_data['guild']['members']
     def print_entries(self):
         for entry in self.current_season_entries:
             boss = entry['type']
