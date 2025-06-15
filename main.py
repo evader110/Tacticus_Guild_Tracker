@@ -9,7 +9,7 @@ heroes = {}
 
 
 def get_hero_name(hero_id):
-    """translates a heroId into a human readable character name"""
+    """translates a heroId into a human-readable character name"""
     return heroes[hero_id]
 
 
