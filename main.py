@@ -2,10 +2,17 @@ import json
 import requests
 import schedule, time
 
+heroes = {}
+
+def get_hero_name(hero_id):
+    return heroes[hero_id]
+
 def load_config(filename = 'conf.json'):
     data = {}
     with open(filename) as json_file:
         data = json.load(json_file)
+    global heroes
+    heroes = data['heroes'] # Not good. Is repeated...
     return data
 
 
