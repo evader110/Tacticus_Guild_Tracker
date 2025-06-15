@@ -1,3 +1,5 @@
+"""This is the main module used for running the Guild Hit Tracker"""
+
 import json
 import requests
 import schedule, time
