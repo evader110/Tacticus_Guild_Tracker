@@ -7,6 +7,10 @@ heroes = {}
 def get_hero_name(hero_id):
     return heroes[hero_id]
 
+def pprint_list(i_list):
+    for item in i_list:
+        print(item)
+
 def load_config(filename = 'conf.json'):
     data = {}
     with open(filename) as json_file:
@@ -15,6 +19,12 @@ def load_config(filename = 'conf.json'):
     heroes = data['heroes'] # Not good. Is repeated...
     return data
 
+
+def get_entry_hero_names(entry):
+    l = []
+    for hero in entry['heroDetails']:
+        l.append(get_hero_name(hero['unitId']))
+    return l
 
 class Guild:
     def __init__(self, config):
@@ -53,6 +63,14 @@ class Guild:
         data = response.json()
         self.name = data['guild']['name']
         self.members = data['guild']['members']
+    def print_entries(self):
+        for entry in self.current_season_entries:
+            boss = entry['type']
+            boss_rarity = entry['rarity']
+            damage_dealt = entry['damageDealt']
+            hero_names = get_entry_hero_names(entry)
+            if len(hero_names) > 0:
+                print([[boss, boss_rarity], hero_names, damage_dealt])
 
     # def display_team(self):
 
