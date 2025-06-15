@@ -87,8 +87,6 @@ class Guild:
 
 if __name__ == '__main__':
     guild = Guild(config=load_config())
-    print(guild.heroes)
-    print(guild.mow)
     guild.load_guild()
     print(guild.name)
     # pprint_list(guild.members)
