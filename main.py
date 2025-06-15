@@ -73,9 +73,11 @@ class Guild:
     def load_guild(self):
         """load the guild data by accessing the API"""
         guild_res = requests.get(self.config['endpoints']['guild'],
-                                 headers=self.headers['guild'])
+                                 headers=self.headers['guild'],
+                                 timeout=5)
         guild_season = requests.get(self.config['endpoints']['guildRaid'],
-                                    headers=self.headers['guild'])
+                                    headers=self.headers['guild'],
+                                    timeout=5)
 
         if guild_res.status_code != 200:
             raise RuntimeError(guild_res.text)
@@ -111,7 +113,7 @@ if __name__ == '__main__':
     # pprint_list(guild.current_season_entries)
     guild.print_entries()
     # schedule.every(1).hours.do(guild.load_units)
-    # r = requests.get(guild.config['endpoints']['player'], headers=guild.headers['personal'])
+    # r = requests.get(guild.config['endpoints']['player'], headers=guild.headers['personal'], timeout=5)
     # print(r.text)
 
     # while True:
