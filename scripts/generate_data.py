@@ -29,7 +29,9 @@ def generate_data(personal_api_key='', guild_api_key='', output_file='../conf.js
     headers = {
         'X-Api-key': personal_api_key
     }
-    response = requests.get('https://api.tacticusgame.com/api/v1/player', headers=headers, timeout=5)
+    response = requests.get('https://api.tacticusgame.com/api/v1/player',
+                            headers=headers,
+                            timeout=5)
     if response.status_code != 200:
         print(f"Failed with status code {response.status_code}:")
         print(response.text)
