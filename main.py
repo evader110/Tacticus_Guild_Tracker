@@ -7,28 +7,32 @@ import requests
 
 heroes = {}
 
+"""translates a heroId into a human readable character name"""
 def get_hero_name(hero_id):
     return heroes[hero_id]
 
+"""prints json lists one entry per line"""
 def pprint_list(i_list):
     for item in i_list:
         print(item)
 
+"""loads the generated config file into the program"""
 def load_config(filename = 'conf.json'):
     data = {}
-    with open(filename) as json_file:
+    with open(filename, encoding="utf-8") as json_file:
         data = json.load(json_file)
     global heroes
     heroes = data['heroes'] # Not good. Is repeated...
     return data
 
-
+"""creates a list of hero names from a raid battle entry"""
 def get_entry_hero_names(entry):
     l = []
     for hero in entry['heroDetails']:
         l.append(get_hero_name(hero['unitId']))
     return l
 
+"""Guild represents a Tacticus Guild"""
 class Guild:
     def __init__(self, config):
         self.name = ''
@@ -60,9 +64,12 @@ class Guild:
         self.current_season_entries = {}
         self.current_season_hits = {}
 
+    """load the guild data by accessing the API"""
     def load_guild(self):
-        guild_res = requests.get(self.config['endpoints']['guild'], headers=self.headers['guild'])
-        guild_season = requests.get(self.config['endpoints']['guildRaid'], headers=self.headers['guild'])
+        guild_res = requests.get(self.config['endpoints']['guild'],
+                                 headers=self.headers['guild'])
+        guild_season = requests.get(self.config['endpoints']['guildRaid'],
+                                    headers=self.headers['guild'])
 
         if guild_res.status_code != 200:
             raise RuntimeError(guild_res.text)
@@ -76,6 +83,7 @@ class Guild:
         self.current_season = raid_data['season']
         self.current_season_entries = raid_data['entries']
 
+    """Print the raid battles in a human readable format"""
     def print_entries(self):
         for entry in self.current_season_entries:
             boss = entry['type']
