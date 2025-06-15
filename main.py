@@ -15,9 +15,10 @@ def get_hero_name(hero_id):
 
 def pprint_list(i_list):
     """prints json lists one entry per line"""
+    ppl = ""
     for item in i_list:
-        print(item)
-
+        ppl = ppl + str(item) + "\n"
+    return ppl
 
 def load_config(filename = 'conf.json'):
     """loads the generated config file into the program"""
