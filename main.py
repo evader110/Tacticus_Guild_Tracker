@@ -4,7 +4,6 @@ import time
 import json
 import requests
 import schedule
-import time
 
 heroes = {}
 
