@@ -54,7 +54,9 @@ class Guild:
         self.heroes = config['heroes']
         self.mow = config['mow']
         self.config = config
-
+        self.current_season = -1
+        self.current_season_entries = {}
+        self.current_season_hits = {}
 
     def load_guild(self):
         guild_res = requests.get(self.config['endpoints']['guild'], headers=self.headers['guild'])
