@@ -24,6 +24,7 @@ ENDPOINTS = {
     "player": "https://api.tacticusgame.com/api/v1/player"
 }
 
+"""read from player given api key to generate a config file for the main program"""
 def generate_data(personal_api_key='', guild_api_key='', output_file='../conf.json'):
     headers = {
         'X-Api-key': personal_api_key
