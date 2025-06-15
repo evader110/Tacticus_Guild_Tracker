@@ -114,7 +114,9 @@ if __name__ == '__main__':
     # pprint_list(guild.current_season_entries)
     guild.print_entries()
     # schedule.every(1).hours.do(guild.load_units)
-    # r = requests.get(guild.config['endpoints']['player'], headers=guild.headers['personal'], timeout=5)
+    # r = requests.get(guild.config['endpoints']['player'],
+    #                  headers=guild.headers['personal'],
+    #                  timeout=5)
     # print(r.text)
 
     # while True:
