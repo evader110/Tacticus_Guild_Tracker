@@ -51,7 +51,6 @@ class Guild:
                 'X-Api-Key': config['api-keys']['guild'],
             },
         }
-        self.heroes = config['heroes']
         self.mow = config['mow']
         self.config = config
         self.current_season = -1
