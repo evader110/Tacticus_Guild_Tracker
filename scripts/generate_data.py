@@ -11,6 +11,11 @@ MOW = {
     "deathCrawler": "Plagueburst Crawler"
 }
 
+NotImplementedHeroes = {
+    "custoTrajann": "Trajann",
+    "custoAesoth": "Aesoth",
+}
+
 ENDPOINTS = {
     "guild": "https://api.tacticusgame.com/api/v1/guild",
     "guildRaid": "https://api.tacticusgame.com/api/v1/guildRaid",
@@ -38,9 +43,9 @@ def generate_data(personal_api_key='', guild_api_key='', output_file='../conf.js
     for unit in data['player']['inventory']['shards']:
         if unit['id'] not in MOW:
             output['heroes'][unit['id']] = unit['name'].split(' Shards')[0]
-
+    output['heroes'] = output['heroes'] | NotImplementedHeroes
     with open(output_file, 'w') as f:
         json.dump(output, f, indent=4)
 
 if __name__ == '__main__':
-    generate_data(sys.argv[1])
+    generate_data(sys.argv[1], sys.argv[2])

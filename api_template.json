@@ -1,0 +1,245 @@
+{
+  "player": {
+    "player": {
+      "details": {
+        "name": "player123",
+        "powerLevel": 10
+      },
+      "units": [
+        {
+          "id": "ultraEliminatorSgt",
+          "name": "Certus",
+          "faction": "Ultramarines",
+          "grandAlliance": "Imperial",
+          "progressionIndex": 5,
+          "xp": 4552,
+          "xpLevel": 6,
+          "rank": 10,
+          "abilities": [
+            {
+              "id": "MortisRound",
+              "level": 35
+            }
+          ],
+          "upgrades": [
+            0,
+            4
+          ],
+          "items": [
+            {
+              "slotId": "Slot1",
+              "level": 2,
+              "id": "I_Crit_R002",
+              "name": "Sanctified Bolt Pistol",
+              "rarity": "Rare"
+            }
+          ],
+          "shards": 100
+        }
+      ],
+      "inventory": {
+        "items": [
+          {
+            "id": "I_Crit_U008",
+            "name": "Aspect Shuriken Pistol",
+            "level": 1,
+            "amount": 6
+          }
+        ],
+        "upgrades": [
+          {
+            "id": "upgDmgC008",
+            "name": "Otherworldly Energy",
+            "amount": 2
+          }
+        ],
+        "shards": [
+          {
+            "id": "ultraEliminatorSgt",
+            "name": "Certus Shards",
+            "amount": 162
+          }
+        ],
+        "xpBooks": [
+          {
+            "id": "xpUncommon",
+            "rarity": "Uncommon",
+            "amount": 164
+          }
+        ],
+        "abilityBadges": {
+          "additionalProp1": [
+            {
+              "name": "Epic Imperial Badges",
+              "rarity": "Epic",
+              "amount": 10
+            }
+          ],
+          "additionalProp2": [
+            {
+              "name": "Epic Imperial Badges",
+              "rarity": "Epic",
+              "amount": 10
+            }
+          ],
+          "additionalProp3": [
+            {
+              "name": "Epic Imperial Badges",
+              "rarity": "Epic",
+              "amount": 10
+            }
+          ]
+        },
+        "components": [
+          {
+            "name": "Xenos Components",
+            "grandAlliance": "Xenos",
+            "amount": 60
+          }
+        ],
+        "forgeBadges": [
+          {
+            "name": "Uncommon Forge Badges",
+            "rarity": "Uncommon",
+            "amount": 10
+          }
+        ],
+        "orbs": {
+          "additionalProp1": [
+            {
+              "rarity": "Uncommon",
+              "amount": 10
+            }
+          ],
+          "additionalProp2": [
+            {
+              "rarity": "Uncommon",
+              "amount": 10
+            }
+          ],
+          "additionalProp3": [
+            {
+              "rarity": "Uncommon",
+              "amount": 10
+            }
+          ]
+        },
+        "requisitionOrders": {
+          "regular": 10,
+          "blessed": 20
+        },
+        "resetStones": 1
+      },
+      "progress": {
+        "campaigns": [
+          {
+            "id": "campaign2",
+            "name": "Fall of Cadia",
+            "type": "Standard",
+            "battles": [
+              {
+                "battleIndex": 10,
+                "attemptsLeft": 2,
+                "attemptsUsed": 3
+              }
+            ]
+          }
+        ],
+        "arena": {
+          "tokens": {
+            "current": 1,
+            "max": 3,
+            "nextTokenInSeconds": 3000,
+            "regenDelayInSeconds": 43200
+          }
+        },
+        "guildRaid": {
+          "tokens": {
+            "current": 1,
+            "max": 3,
+            "nextTokenInSeconds": 3000,
+            "regenDelayInSeconds": 43200
+          },
+          "bombTokens": {
+            "current": 1,
+            "max": 3,
+            "nextTokenInSeconds": 3000,
+            "regenDelayInSeconds": 43200
+          }
+        },
+        "onslaught": {
+          "tokens": {
+            "current": 1,
+            "max": 3,
+            "nextTokenInSeconds": 3000,
+            "regenDelayInSeconds": 43200
+          }
+        },
+        "salvageRun": {
+          "tokens": {
+            "current": 1,
+            "max": 3,
+            "nextTokenInSeconds": 3000,
+            "regenDelayInSeconds": 43200
+          }
+        }
+      }
+    },
+    "metaData": {
+      "configHash": "6070bc3fe1238ab5b2269efd75639b55",
+      "apiKeyExpiresOn": 1766067907,
+      "lastUpdatedOn": 0,
+      "scopes": "Player"
+    }
+  },
+  "guild": {
+    "guildId": "e2b03cf8-93c0-4d01-ba66-abcdef62d65c",
+    "guildTag": "ABCDE",
+    "name": "Tacticus guild",
+    "level": 5,
+    "members": [
+      {
+        "userId": "a6977954-4da1-4218-b939-accdef523bc4",
+        "role": "LEADER",
+        "level": 35,
+        "lastActivityOn": "2025-06-15T05:24:04.266Z"
+      }
+    ],
+    "guildRaidSeasons": [
+      0
+    ]
+  },
+  "guildRaid": {
+    "season": 0,
+    "seasonConfigId": "string",
+    "entries": [
+      {
+        "userId": "a6977954-4da1-4218-b939-accdef523bc4",
+        "tier": 0,
+        "set": 0,
+        "encounterIndex": 0,
+        "remainingHp": 12500,
+        "maxHp": 18000,
+        "encounterType": "Boss",
+        "unitId": "GuildBoss1Boss1TyranTervigonLeviathan",
+        "type": "TervigonLeviathan",
+        "rarity": "Common",
+        "damageDealt": 2000,
+        "damageType": "Battle",
+        "startedOn": "2025-06-15T05:05:08.219Z",
+        "completedOn": "2025-06-15T05:05:08.219Z",
+        "heroDetails": [
+          {
+            "unitId": "ultraEliminatorSgt",
+            "power": 5700
+          }
+        ],
+        "machineOfWarDetails": {
+          "unitId": "ultraEliminatorSgt",
+          "power": 5700
+        },
+        "globalConfigHash": "5ef79f82bafac0e91746e0ff3ecb83c8"
+      }
+    ]
+  }
+}
