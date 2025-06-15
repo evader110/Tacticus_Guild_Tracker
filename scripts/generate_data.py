@@ -1,3 +1,5 @@
+"""This script generates the config files needed for the main module"""
+
 import json
 import sys
 import requests
