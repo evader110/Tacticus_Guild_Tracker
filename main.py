@@ -57,22 +57,21 @@ class Guild:
 
 
     def load_guild(self):
-        response = requests.get(self.config['endpoints']['guild'], headers=self.headers['guild'])
-        if response.status_code != 200:
-            raise RuntimeError(response.text)
-        data = response.json()
-        self.name = data['guild']['name']
-        self.members = data['guild']['members']
         guild_res = requests.get(self.config['endpoints']['guild'], headers=self.headers['guild'])
         guild_season = requests.get(self.config['endpoints']['guildRaid'], headers=self.headers['guild'])
+
         if guild_res.status_code != 200:
             raise RuntimeError(guild_res.text)
         if guild_season.status_code != 200:
             raise RuntimeError(guild_season.text)
 
         guild_data = guild_res.json()
+        raid_data = guild_season.json()
         self.name = guild_data['guild']['name']
         self.members = guild_data['guild']['members']
+        self.current_season = raid_data['season']
+        self.current_season_entries = raid_data['entries']
+
     def print_entries(self):
         for entry in self.current_season_entries:
             boss = entry['type']
